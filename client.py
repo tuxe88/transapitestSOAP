@@ -4,7 +4,7 @@ import requests
 
 url = 'http://127.0.0.1:5000/test/get/flight?wsdl'
 client = SudsClient(url=url, cache=None)
-r = client.service.get_flights('Testing')
+r = client.service.get_flights()
 print(r)
 
 """

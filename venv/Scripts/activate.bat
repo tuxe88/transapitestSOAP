@@ -1,5 +1,5 @@
 @echo off
-set "VIRTUAL_ENV=C:\microblet\transoftSOAP\venv"
+set "VIRTUAL_ENV=C:\Users\tuxe\Desktop\microblOt\transapitestSOAP\venv"
 
 if defined _OLD_VIRTUAL_PROMPT (
     set "PROMPT=%_OLD_VIRTUAL_PROMPT%"

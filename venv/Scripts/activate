@@ -40,7 +40,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="$(if [ "$OSTYPE" "==" "cygwin" ]; then cygpath -u 'C:\microblet\transoftSOAP\venv'; else echo '/C/microblet/transoftSOAP/venv'; fi;)"
+VIRTUAL_ENV="$(if [ "$OSTYPE" "==" "cygwin" ]; then cygpath -u 'C:\Users\tuxe\Desktop\microblOt\transapitestSOAP\venv'; else echo '/C/Users/tuxe/Desktop/microblOt/transapitestSOAP/venv'; fi;)"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
