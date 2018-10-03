@@ -7,6 +7,7 @@ client = SudsClient(url=url, cache=None)
 r = client.service.get_flights()
 print(r)
 
+
 """
 
 r = client.service.answer(str='some question')
