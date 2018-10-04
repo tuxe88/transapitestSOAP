@@ -1,12 +1,10 @@
 from flask import Flask
 from flask_spyne import Spyne
-import re
 
 from spyne.protocol.soap import Soap11
 from spyne.protocol.json import JsonDocument
 
-
-from spyne.model.primitive import Unicode, Integer, Boolean
+from spyne.model.primitive import Unicode, Integer, Boolean, Decimal
 from spyne.model.complex import Iterable, ComplexModel,Array
 from spyne.model.primitive import DateTime
 
@@ -24,7 +22,13 @@ app = Flask(__name__)
 
 spyne = Spyne(app)
 
+"""
+    Modelos de spyne utilizados para crear el WSDL y manejar los requests y responses
+"""
+
+
 class AV(ComplexModel):
+
     key = Integer(min_occurs=1, max_occurs=1, nillable=False)
     value = Integer(min_occurs=1, max_occurs=1, nillable=False)
 
@@ -54,11 +58,21 @@ class Connection(ComplexModel):
 
 class Fare(ComplexModel):
 
-    type = Unicode(min_occurs=0, max_occurs=1, nillable=True)
-    value = Integer(min_occurs=1, max_occurs=1, nillable=False)
+    type = Unicode(min_occurs=1, max_occurs=1, nillable=True)
+    fare_class = Unicode(min_occurs=0, max_occurs=1, nillable=True)
+    fare_name = Unicode(min_occurs=0, max_occurs=1, nillable=True)
+    fare_price = Decimal(min_occurs=0, max_occurs=1, nillable=True)
+    currency = Unicode(min_occurs=0, max_occurs=1, nillable=True)
+    exchange_rate = Unicode(min_occurs=0, max_occurs=1, nillable=True)
+    fare_book = Unicode(min_occurs=0, max_occurs=1, nillable=True)
+    AV = Array(AV.customize(nillable=True))
+    rules = Unicode(min_occurs=0, max_occurs=1, nillable=True)
+    return_ = Unicode(min_occurs=0, max_occurs=1, nillable=True)
+    connection = Unicode(min_occurs=0, max_occurs=1, nillable=True)
 
 
 class Auth(ComplexModel):
+
     session = Unicode(min_occurs=1, max_occurs=1, nillable=False)
     gcp = Unicode(min_occurs=1, max_occurs=1, nillable=False)
     userId = Unicode(min_occurs=1, max_occurs=1, nillable=False)
@@ -95,13 +109,13 @@ class Flight(ComplexModel):
     range = Unicode(min_occurs=0, max_occurs=1, nillable=False)
     info = Unicode(min_occurs=0, max_occurs=1, nillable=False)
 
-
+#  Clase que representa el input de GetFlights
 class GetFlights(ComplexModel):
 
     auth = Auth(min_occurs=1, max_occurs=1, nillable=False)
     flight = Flight(min_occurs=1, max_occurs=1, nillable=False)
 
-
+#  Clase que representa el output de GetFlights
 class GetFlightsResponse(ComplexModel):
 
     Error = Unicode(min_occurs=1, max_occurs=1, nillable=False)
@@ -109,9 +123,10 @@ class GetFlightsResponse(ComplexModel):
 
 
 class GetFlightService(spyne.Service):
+
     __service_url_path__ = '/test/get/flight'
     __in_protocol__ = Soap11(validator='lxml')
-    __out_protocol__ = out_protocol=Soap11()
+    __out_protocol__ = out_protocol = Soap11()
 
     @spyne.srpc(Auth, Flight,  _returns=GetFlightsResponse)
     def get_flights(auth, flight):
@@ -120,7 +135,6 @@ class GetFlightService(spyne.Service):
 
         headers = {'Content-type': 'application/json'}
         response_json = requests.post('http://localhost:5000/temp/get/flight', data=request_json, headers=headers)
-
         response_json = json.loads(response_json.text)
 
         flights = []
@@ -128,37 +142,70 @@ class GetFlightService(spyne.Service):
         get_flights_response = GetFlightsResponse()
         get_flights_response.Error = response_json["error"]
 
+        #  Por cada flight recibido, voy a recorrer tambien sus conexiones y fares y agregarlas a la respuesta
         for f in response_json["flights"]:
             new_flight = Flight()
-
-            new_flight.departureDatetime = datetime.strptime(f["departureDatetime"],"'%Y-%d-%bT%I:%M%p'")
-            new_flight.departureDatetime = datetime.strptime(f["arrivalDateTime"], "'%Y-%d-%bT%I:%M%p'")
             new_flight.from_ = f["from"]
             new_flight.to = f["to"]
             new_flight.airlineIATA = f["airlineIATA"]
             new_flight.airline = f["airline"]
             new_flight.flightNumber = f["flightNumber"]
             new_flight.range = f["range"]
-
+            new_flight.arrivalDateTime = datetime.datetime.strptime(f["arrivalDateTime"],
+                                                                    "%Y-%m-%dT%H:%M:%S")
+            new_flight.departureDatetime = datetime.datetime.strptime(f["departureDatetime"],
+                                                                      "%Y-%m-%dT%H:%M:%S")
+            new_flight.nAdult = 1  # TODO completar
+            new_flight.nChild = 1  # TODO completar
+            new_flight.nInfant = 1  # TODO completar
+            new_flight.Index = int(f["Index"])
             new_flight.type = f["type"]
             new_flight.schedule = f["schedule"]
             new_flight.info = f["info"]
             new_flight.return_ = f["return"]
+            new_flight.LConnections = []
+            new_flight.LFares = []
 
-            # new_flight.validReturns = f["validReturns"]
-            # new_flight.Index = f["Index"]
-            #
-            """
-            new_flight.nAdult = f["nAdult"]
-            new_flight.nChild = f["nChild"]
-            new_flight.nInfant = f["nInfant"]
-            
-            """
+            for c in f["LConnections"]:
+
+                new_connection = Connection()
+                new_connection.airline = c["airline"]
+                new_connection.airlineIATA = c["airlineIATA"]
+                new_connection.from_ = c["from"]
+                new_connection.fromAirport = c["fromAiport"]
+                new_connection.fromAirportIATA = c["fromAirportIATA"]
+                new_connection.to = c["to"]
+                new_connection.toAirport = c["toAirport"]
+                new_connection.toAirportIATA = c["toAirpottIATA"] #TODO corregir SOAP
+                new_connection.flightNumber = c["flightNumber"]
+                new_connection.map = c["map"]
+
+                new_connection.departureDatetime = datetime.datetime.strptime(c["departureDatetime"],
+                                                                              "%Y-%m-%dT%H:%M:%S")
+                new_connection.arrivalDateTime = datetime.datetime.strptime(c["arrivalDateTime"],
+                                                                              "%Y-%m-%dT%H:%M:%S")
+                # new_connection.AV = c["AV"] TODO agregar AV a estructuras
+
+                new_flight.LConnections.append(new_connection)
+
+            for flare in f["LFares"]:
+                new_fare = Fare()
+                new_fare.type = flare["type"]
+                new_fare.fare_name = flare["fare_name"]
+                new_fare.fare_price = flare["fare_price"]
+                new_fare.currency = flare["currency"]
+                new_fare.exchange_rate = flare["exchange_rate"]
+                new_fare.fare_book = flare["fare_book"]
+                new_fare.rules = flare["rules"]
+                new_fare.return_ = flare["return_"]
+                new_fare.connection = flare["connection"]
+
+                new_flight.LFares.append(new_fare)
 
             flights.append(new_flight)
 
-
         get_flights_response.Flights = flights
+
         return get_flights_response
 
 
