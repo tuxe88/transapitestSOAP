@@ -137,76 +137,81 @@ class GetFlightService(spyne.Service):
         response_json = requests.post('http://localhost:5000/temp/get/flight', data=request_json, headers=headers)
         response_json = json.loads(response_json.text)
 
-        flights = []
-
-        get_flights_response = GetFlightsResponse()
-        get_flights_response.Error = response_json["error"]
-
-        #  Por cada flight recibido, voy a recorrer tambien sus conexiones y fares y agregarlas a la respuesta
-        for f in response_json["flights"]:
-            new_flight = Flight()
-            new_flight.from_ = f["from"]
-            new_flight.to = f["to"]
-            new_flight.airlineIATA = f["airlineIATA"]
-            new_flight.airline = f["airline"]
-            new_flight.flightNumber = f["flightNumber"]
-            new_flight.range = f["range"]
-            new_flight.arrivalDateTime = datetime.datetime.strptime(f["arrivalDateTime"],
-                                                                    "%Y-%m-%dT%H:%M:%S")
-            new_flight.departureDatetime = datetime.datetime.strptime(f["departureDatetime"],
-                                                                      "%Y-%m-%dT%H:%M:%S")
-            new_flight.nAdult = 1  # TODO completar
-            new_flight.nChild = 1  # TODO completar
-            new_flight.nInfant = 1  # TODO completar
-            new_flight.Index = int(f["Index"])
-            new_flight.type = f["type"]
-            new_flight.schedule = f["schedule"]
-            new_flight.info = f["info"]
-            new_flight.return_ = f["return"]
-            new_flight.LConnections = []
-            new_flight.LFares = []
-
-            for c in f["LConnections"]:
-
-                new_connection = Connection()
-                new_connection.airline = c["airline"]
-                new_connection.airlineIATA = c["airlineIATA"]
-                new_connection.from_ = c["from"]
-                new_connection.fromAirport = c["fromAiport"]
-                new_connection.fromAirportIATA = c["fromAirportIATA"]
-                new_connection.to = c["to"]
-                new_connection.toAirport = c["toAirport"]
-                new_connection.toAirportIATA = c["toAirpottIATA"] #TODO corregir SOAP
-                new_connection.flightNumber = c["flightNumber"]
-                new_connection.map = c["map"]
-
-                new_connection.departureDatetime = datetime.datetime.strptime(c["departureDatetime"],
-                                                                              "%Y-%m-%dT%H:%M:%S")
-                new_connection.arrivalDateTime = datetime.datetime.strptime(c["arrivalDateTime"],
-                                                                              "%Y-%m-%dT%H:%M:%S")
-                # new_connection.AV = c["AV"] TODO agregar AV a estructuras
-
-                new_flight.LConnections.append(new_connection)
-
-            for flare in f["LFares"]:
-                new_fare = Fare()
-                new_fare.type = flare["type"]
-                new_fare.fare_name = flare["fare_name"]
-                new_fare.fare_price = flare["fare_price"]
-                new_fare.currency = flare["currency"]
-                new_fare.exchange_rate = flare["exchange_rate"]
-                new_fare.fare_book = flare["fare_book"]
-                new_fare.rules = flare["rules"]
-                new_fare.return_ = flare["return_"]
-                new_fare.connection = flare["connection"]
-
-                new_flight.LFares.append(new_fare)
-
-            flights.append(new_flight)
-
-        get_flights_response.Flights = flights
+        get_flights_response = generate_get_flights_response(response_json)
 
         return get_flights_response
+
+
+def generate_get_flights_response(response_json):
+
+    flights = []
+
+    get_flights_response = GetFlightsResponse()
+    get_flights_response.Error = response_json["error"]
+
+    #  Por cada flight recibido, voy a recorrer tambien sus conexiones y fares y agregarlas a la respuesta
+    for f in response_json["flights"]:
+        new_flight = Flight()
+        new_flight.from_ = f["from"]
+        new_flight.to = f["to"]
+        new_flight.airlineIATA = f["airlineIATA"]
+        new_flight.airline = f["airline"]
+        new_flight.flightNumber = f["flightNumber"]
+        new_flight.range = f["range"]
+        new_flight.arrivalDateTime = datetime.datetime.strptime(f["arrivalDateTime"],
+                                                                "%Y-%m-%dT%H:%M:%S")
+        new_flight.departureDatetime = datetime.datetime.strptime(f["departureDatetime"],
+                                                                  "%Y-%m-%dT%H:%M:%S")
+        new_flight.nAdult = 1  # TODO completar
+        new_flight.nChild = 1  # TODO completar
+        new_flight.nInfant = 1  # TODO completar
+        new_flight.Index = int(f["Index"])
+        new_flight.type = f["type"]
+        new_flight.schedule = f["schedule"]
+        new_flight.info = f["info"]
+        new_flight.return_ = f["return"]
+        new_flight.LConnections = []
+        new_flight.LFares = []
+
+        for c in f["LConnections"]:
+            new_connection = Connection()
+            new_connection.airline = c["airline"]
+            new_connection.airlineIATA = c["airlineIATA"]
+            new_connection.from_ = c["from"]
+            new_connection.fromAirport = c["fromAiport"]
+            new_connection.fromAirportIATA = c["fromAirportIATA"]
+            new_connection.to = c["to"]
+            new_connection.toAirport = c["toAirport"]
+            new_connection.toAirportIATA = c["toAirpottIATA"]  # TODO corregir SOAP
+            new_connection.flightNumber = c["flightNumber"]
+            new_connection.map = c["map"]
+
+            new_connection.departureDatetime = datetime.datetime.strptime(c["departureDatetime"],
+                                                                          "%Y-%m-%dT%H:%M:%S")
+            new_connection.arrivalDateTime = datetime.datetime.strptime(c["arrivalDateTime"],
+                                                                        "%Y-%m-%dT%H:%M:%S")
+            # new_connection.AV = c["AV"] TODO agregar AV a estructuras
+
+            new_flight.LConnections.append(new_connection)
+
+        for flare in f["LFares"]:
+            new_fare = Fare()
+            new_fare.type = flare["type"]
+            new_fare.fare_name = flare["fare_name"]
+            new_fare.fare_price = flare["fare_price"]
+            new_fare.currency = flare["currency"]
+            new_fare.exchange_rate = flare["exchange_rate"]
+            new_fare.fare_book = flare["fare_book"]
+            new_fare.rules = flare["rules"]
+            new_fare.return_ = flare["return_"]
+            new_fare.connection = flare["connection"]
+
+            new_flight.LFares.append(new_fare)
+
+        flights.append(new_flight)
+
+    get_flights_response.Flights = flights
+    return get_flights_response
 
 
 def generate_json_request_get_flights(auth, flight):
