@@ -7,6 +7,7 @@ from spyne.protocol.json import JsonDocument
 from spyne.model.primitive import Unicode, Integer, Boolean, Decimal
 from spyne.model.complex import Iterable, ComplexModel,Array
 from spyne.model.primitive import DateTime
+from spyne.error import Fault
 
 import json
 import logging
@@ -121,6 +122,10 @@ class GetFlightsResponse(ComplexModel):
     Error = Unicode(min_occurs=1, max_occurs=1, nillable=False)
     Flights = Array(Flight.customize(min_occurs=1, max_occurs=1, nillable=True))
 
+# Clase que representa un Error
+class ErrorResponse(ComplexModel):
+
+    Error = Unicode(min_occurs=1, max_occurs=1, nillable=False)
 
 class GetFlightService(spyne.Service):
 
@@ -140,6 +145,16 @@ class GetFlightService(spyne.Service):
         get_flights_response = generate_get_flights_response(response_json)
 
         return get_flights_response
+
+    @app.errorhandler(Exception)
+    def handle_error(e):
+        code = 500
+
+        if isinstance(e, Fault):
+            error_response = ErrorResponse()
+            error_response.Error = "NOK: "+e.faultcode + " " + e.faultstring
+
+            return error_response
 
 
 def generate_get_flights_response(response_json):
@@ -162,9 +177,9 @@ def generate_get_flights_response(response_json):
                                                                 "%Y-%m-%dT%H:%M:%S")
         new_flight.departureDatetime = datetime.datetime.strptime(f["departureDatetime"],
                                                                   "%Y-%m-%dT%H:%M:%S")
-        new_flight.nAdult = 1  # TODO completar
-        new_flight.nChild = 1  # TODO completar
-        new_flight.nInfant = 1  # TODO completar
+        new_flight.nAdult = f["nAdult"]
+        new_flight.nChild = f["nChild"]
+        new_flight.nInfant = f["nInfant"]
         new_flight.Index = int(f["Index"])
         new_flight.type = f["type"]
         new_flight.schedule = f["schedule"]
@@ -185,7 +200,6 @@ def generate_get_flights_response(response_json):
             new_connection.toAirportIATA = c["toAirpottIATA"]  # TODO corregir SOAP
             new_connection.flightNumber = c["flightNumber"]
             new_connection.map = c["map"]
-
             new_connection.departureDatetime = datetime.datetime.strptime(c["departureDatetime"],
                                                                           "%Y-%m-%dT%H:%M:%S")
             new_connection.arrivalDateTime = datetime.datetime.strptime(c["arrivalDateTime"],
@@ -216,6 +230,15 @@ def generate_get_flights_response(response_json):
 
 def generate_json_request_get_flights(auth, flight):
 
+    av = flight.AV
+    json_av = []
+    for row in av:
+        key = row.key
+        if key == 'nSenior':
+            json_av.append({"key": row.key,"value": row["value"]})
+        if key == 'cabinClass':
+            json_av.append({"key": row.key, "value": row["value"]})
+
     data_request = {
         "Auth": {
             "session": auth.session,
@@ -242,16 +265,7 @@ def generate_json_request_get_flights(auth, flight):
                 "lFares": flight.LFares,
                 "validReturns": flight.validReturns,
                 "nAdult": flight.nAdult,
-                "AV": [
-                    {
-                        "key": "nSenior",
-                        "value": "0"
-                    },
-                    {
-                        "key": "cabinClass",
-                        "value": 0
-                    }
-                ],
+                "AV": av,
                 "type": flight.type,
                 "return": flight.return_,
                 "lAction": "",
