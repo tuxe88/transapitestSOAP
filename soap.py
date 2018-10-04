@@ -1,10 +1,8 @@
 from flask import Flask
 from flask_spyne import Spyne
-import re
 
 from spyne.protocol.soap import Soap11
 from spyne.protocol.json import JsonDocument
-
 
 from spyne.model.primitive import Unicode, Integer, Boolean, Decimal
 from spyne.model.complex import Iterable, ComplexModel,Array
@@ -23,6 +21,10 @@ rl.addHandler(h)
 app = Flask(__name__)
 
 spyne = Spyne(app)
+
+"""
+    Modelos de spyne utilizados para crear el WSDL y manejar los requests y responses
+"""
 
 
 class AV(ComplexModel):
@@ -68,6 +70,7 @@ class Fare(ComplexModel):
     return_ = Unicode(min_occurs=0, max_occurs=1, nillable=True)
     connection = Unicode(min_occurs=0, max_occurs=1, nillable=True)
 
+
 class Auth(ComplexModel):
 
     session = Unicode(min_occurs=1, max_occurs=1, nillable=False)
@@ -81,6 +84,7 @@ class Auth(ComplexModel):
 
 class Flight(ComplexModel):
 
+    __namespace__ = 'testing'
     Index = Integer(min_occurs=0, max_occurs=1, nillable=True)
     flightNumber = Unicode(min_occurs=0, max_occurs=1, nillable=True)
     airline = Unicode(min_occurs=0, max_occurs=1, nillable=True)
@@ -105,13 +109,13 @@ class Flight(ComplexModel):
     range = Unicode(min_occurs=0, max_occurs=1, nillable=False)
     info = Unicode(min_occurs=0, max_occurs=1, nillable=False)
 
-
+#  Clase que representa el input de GetFlights
 class GetFlights(ComplexModel):
 
     auth = Auth(min_occurs=1, max_occurs=1, nillable=False)
     flight = Flight(min_occurs=1, max_occurs=1, nillable=False)
 
-
+#  Clase que representa el output de GetFlights
 class GetFlightsResponse(ComplexModel):
 
     Error = Unicode(min_occurs=1, max_occurs=1, nillable=False)
@@ -119,9 +123,10 @@ class GetFlightsResponse(ComplexModel):
 
 
 class GetFlightService(spyne.Service):
+
     __service_url_path__ = '/test/get/flight'
     __in_protocol__ = Soap11(validator='lxml')
-    __out_protocol__ = out_protocol=Soap11()
+    __out_protocol__ = out_protocol = Soap11()
 
     @spyne.srpc(Auth, Flight,  _returns=GetFlightsResponse)
     def get_flights(auth, flight):
@@ -130,7 +135,6 @@ class GetFlightService(spyne.Service):
 
         headers = {'Content-type': 'application/json'}
         response_json = requests.post('http://localhost:5000/temp/get/flight', data=request_json, headers=headers)
-
         response_json = json.loads(response_json.text)
 
         flights = []
@@ -138,6 +142,7 @@ class GetFlightService(spyne.Service):
         get_flights_response = GetFlightsResponse()
         get_flights_response.Error = response_json["error"]
 
+        #  Por cada flight recibido, voy a recorrer tambien sus conexiones y fares y agregarlas a la respuesta
         for f in response_json["flights"]:
             new_flight = Flight()
             new_flight.from_ = f["from"]
@@ -200,6 +205,7 @@ class GetFlightService(spyne.Service):
             flights.append(new_flight)
 
         get_flights_response.Flights = flights
+
         return get_flights_response
 
 
