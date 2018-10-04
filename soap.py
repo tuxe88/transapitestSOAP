@@ -68,6 +68,7 @@ class GetFlights(ComplexModel):
     auth = Auth(min_occurs=1, max_occurs=1, nillable=False)
     flight = Flight(min_occurs=1, max_occurs=1, nillable=False)
 
+
 class GetFlightsResponse(ComplexModel):
 
     auth = Auth(min_occurs=1, max_occurs=1, nillable=False)
@@ -83,6 +84,7 @@ class GetFlightService(spyne.Service):
     def get_flights(Auth, Flight):
 
         return GetFlights(Auth,Flight)
+
 
 class GetFlightResponseService(spyne.Service):
     __service_url_path__ = '/test/get/flight'
