@@ -16,6 +16,8 @@ _mailinglist
 .idea/
 docs/_build/
 
+error.log
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 instance/__pycache__/
