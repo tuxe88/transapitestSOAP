@@ -43,6 +43,7 @@ venv.bak/
 
 
 # pycharm
+.idea/workspace.xml
 .idea/**/workspace.xml
 .idea/**/tasks.xml
 .idea/**/usage.statistics.xml
