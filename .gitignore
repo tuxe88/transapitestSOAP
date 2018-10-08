@@ -16,6 +16,8 @@ _mailinglist
 .idea/
 docs/_build/
 
+error.log
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 instance/__pycache__/
@@ -43,7 +45,9 @@ venv.bak/
 
 
 # pycharm
+
 .idea/workspace.xml
+.idea/
 .idea/**/workspace.xml
 .idea/**/tasks.xml
 .idea/**/usage.statistics.xml
