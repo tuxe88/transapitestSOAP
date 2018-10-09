@@ -144,7 +144,7 @@ class GetFlightService(spyne.Service):
 
         headers = {'Content-type': 'application/json'}
         response_json = requests.post('http://localhost:5000/temp/get/flight', data=request_json, headers=headers)
-        response_json = json.loads(response_json)
+        response_json = json.loads(response_json.text)
 
         get_flights_response = generate_get_flights_response(response_json)
 
@@ -245,6 +245,9 @@ def generate_get_flights_response(response_json):
 
 
 def generate_json_request_get_flights(auth, flight):
+
+    print(str(flight.departureDatetime))
+    print(str(flight.arrivalDateTime))
 
     data_request = {
         "Auth": {
