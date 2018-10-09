@@ -42,11 +42,11 @@ http://127.0.0.1:5010/test/get/flight?wsdl
 
 Se crea el virtualenv
 ```
-virtualenv -p /usr/bin/python2.7 CARPETA_DEL_PROYECTO\venv
+virtualenv -p /usr/bin/python2.7 CARPETA_DEL_PROYECTO/venv
 ```
 Activo el virtualenv
 ```
-virtualenv CARPETA_DEL_PROYECTO\venv\Scripts\activate
+source CARPETA_DEL_PROYECTO/venv/bin/activate
 ```
 Instalo los requerimientos
 ```
