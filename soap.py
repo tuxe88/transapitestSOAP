@@ -231,7 +231,6 @@ def generate_get_flights_response(response_json):
             new_fare.return_ = flare["return_"]
             new_fare.connection = flare["connection"]
 
-
             new_flight.LFares.append(new_fare)
 
         flights.append(new_flight)
