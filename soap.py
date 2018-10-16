@@ -4,7 +4,7 @@ from flask_spyne import Spyne
 from spyne.protocol.soap import Soap11
 from spyne.protocol.json import JsonDocument
 
-from spyne.model.primitive import Unicode, Integer, Boolean, Float
+from spyne.model.primitive import Unicode, Integer, Boolean, Float, String
 from spyne.model.complex import Iterable, ComplexModel,Array
 from spyne.model.primitive import DateTime,Date
 from spyne.error import Fault
@@ -28,20 +28,22 @@ app.logger.addHandler(file_handler)
 
 @app.errorhandler(Exception)
 def handle_error(e):
-    print("ERRRRRRRORRRRRRRRRRRRRRRRRR")
     error_response = ErrorResponse()
-    error_response.Error = "NOK: " + e.faultcode + " " + e.faultstring
 
-    if isinstance(e, Fault):
-        error_response = ErrorResponse()
-        error_response.Error = "NOK: " + e.faultcode + " " + e.faultstring
+    if isinstance(e, Exception):
+        error_response.Error = "NOK: " + str(e)
+        print(e)
+        print(traceback.format_exc())
+        app.logger.error(e)
+        app.logger.error(traceback.format_exc())
 
         return error_response
 
-    print(e)
-    print(traceback.format_exc())
-    app.logger.error(e)
-    app.logger.error(traceback.format_exc())
+    if isinstance(e, Fault):
+        error_response.Error = "NOK: " + e.faultcode + " " + e.faultstring
+        app.logger.error(e)
+        app.logger.error(traceback.format_exc())
+        return error_response
 
 spyne = Spyne(app)
 
@@ -145,9 +147,46 @@ class GetFlightsResponse(ComplexModel):
     Error = Unicode(min_occurs=1, max_occurs=1, nillable=False)
     Flights = Array(Flight.customize(min_occurs=1, max_occurs=1, nillable=True))
 
+
+class Region(ComplexModel):
+    __namespace__ = 'get_destinations'
+    id = Integer(min_occurs=1, max_occurs=1, nillable=False)
+    name = Unicode(min_occurs=1, max_occurs=1, nillable=False)
+
+class Country(ComplexModel):
+    __namespace__ = 'get_destinations'
+    id = Integer(min_occurs=1, max_occurs=1, nillable=False)
+    code = Unicode(min_occurs=1, max_occurs=1, nillable=False)
+    name = Unicode(min_occurs=1, max_occurs=1, nillable=False)
+    name_spanish = Unicode(min_occurs=1, max_occurs=1, nillable=False)
+    continent = Unicode(min_occurs=1, max_occurs=1, nillable=False)
+
+class Airport(ComplexModel):
+    __namespace__ = 'get_destinations'
+    id = Integer(min_occurs=1, max_occurs=1, nillable=False)
+    code = Unicode(min_occurs=1, max_occurs=1, nillable=False)
+    name = Unicode(min_occurs=1, max_occurs=1, nillable=False)
+    international = Boolean(min_occurs=1, max_occurs=1, nillable=False)
+    airport = Integer(min_occurs=1, max_occurs=1, nillable=False)
+
+class Data(ComplexModel):
+    __namespace__ = 'get_destinations'
+    id = Integer(min_occurs=1, max_occurs=1, nillable=False)
+    region = Region(min_occurs=1, max_occurs=1, nillable=True)
+    country = Country(min_occurs=1, max_occurs=1, nillable=True)
+    airports = Array(Airport.customize(min_occurs=1, max_occurs=1, nillable=True))
+    code = Unicode(min_occurs=1, max_occurs=1, nillable=False)
+    name = Unicode(min_occurs=1, max_occurs=1, nillable=False)
+    pais = Unicode(min_occurs=1, max_occurs=1, nillable=False)
+    location = Unicode(min_occurs=1, max_occurs=1, nillable=False)
+
+#clase que representa el response de getDestinations
+class GetDestinationResponse(ComplexModel):
+    Error = Unicode(min_occurs=1, max_occurs=1, nillable=False)
+    Data = Array(Data.customize(min_occurs=1, max_occurs=1, nillable=True))
+
 # Clase que representa un Error
 class ErrorResponse(ComplexModel):
-
     Error = Unicode(min_occurs=1, max_occurs=1, nillable=False)
 
 class GetFlightService(spyne.Service):
@@ -168,6 +207,90 @@ class GetFlightService(spyne.Service):
         get_flights_response = generate_get_flights_response(response_json)
 
         return get_flights_response
+
+class GetDestinationService(spyne.Service):
+
+    __service_url_path__ = '/get/destinations'
+    __in_protocol__ = Soap11(validator='lxml')
+    __out_protocol__ = out_protocol = Soap11()
+
+    @spyne.srpc(String, _returns=GetDestinationResponse)
+    def get_destinations(city):
+
+        url = 'http://localhost:5000/get/destinations?city='+city
+
+        headers = {'Content-type': 'application/json'}
+        response_json = requests.get(url, headers=headers)
+        response_json = json.loads(response_json.text)
+
+        get_destination_response = generate_get_destinations_response(response_json)
+
+        return get_destination_response
+
+def generate_get_destinations_response(response_json):
+
+    """
+    "data": [
+        {
+            "id": 151,
+            "region_id": {
+                "id": 1,
+                "name": "Default"
+            },
+            "country_id": {
+                "id": 11,
+                "code": "AR",
+                "name": "ARGENTINA",
+                "name_spanish": "ARGENTINA",
+                "continent": "South America"
+            },
+            "airports": [
+                {
+                    "id": 2293,
+                    "code": "EZE",
+                    "name": "Ministro Pistarini",
+                    "international": 0,
+                    "airport": 1
+                }
+            ],
+            "code": "EZE",
+            "name": "Buenos Aires",
+            "pais": "ARGENTINA",
+            "location": "Ministro Pistarini"
+        }
+    ],
+
+    :param response_json:
+    :return:
+    """
+
+    datas = []
+
+    get_destination_response = GetDestinationResponse()
+    get_destination_response.Error = response_json["error"]
+
+    if response_json["error"] == "OK":
+        #  Por cada data recibidovoy a hacer la transformacion
+        for d in response_json["data"]:
+
+            new_data = Data()
+            new_data.id = int(d["id"])
+            new_data.code = d["code"]
+            new_data.name = d["name"]
+            new_data.pais = d["pais"]
+            new_data.location = d["location"]
+
+            #TODO
+
+            datas.append(new_data)
+
+        get_destination_response.Data = datas
+
+    else:
+        error_response = ErrorResponse()
+        error_response.Error = response_json["error"]
+
+    return get_destination_response
 
 def generate_get_flights_response(response_json):
 
