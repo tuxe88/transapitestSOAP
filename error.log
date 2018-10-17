@@ -8,3 +8,13 @@
     raise request.routing_exception
 NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
  
+2018-10-17 17:15:07,210 | C:\microblet\transoftSOAP\soap.py:37 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-17 17:15:07,211 | C:\microblet\transoftSOAP\soap.py:38 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 

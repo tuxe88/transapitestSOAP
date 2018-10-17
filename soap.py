@@ -3,6 +3,8 @@ from flask_spyne import Spyne
 
 from spyne.protocol.soap import Soap11
 from spyne.protocol.json import JsonDocument
+from spyne.util.odict import odict
+from spyne.model.complex import ComplexModelBase
 
 from spyne.model.primitive import Unicode, Integer, Boolean, Float, String
 from spyne.model.complex import Iterable, ComplexModel,Array
@@ -52,53 +54,88 @@ spyne = Spyne(app)
     Modelos de spyne utilizados para crear el WSDL y manejar los requests y responses
 """
 
-
-class AV(ComplexModel):
-
-    key = Unicode(min_occurs=1, max_occurs=1, nillable=False)
-    value = Integer(min_occurs=1, max_occurs=1, nillable=False)
-
-
-class Connection(ComplexModel):
-
-    Index = Integer(min_occurs=0, max_occurs=1, nillable=True)
-    flightNumber = Unicode(min_occurs=0, max_occurs=1, nillable=True)
-    airline = Unicode(min_occurs=0, max_occurs=1, nillable=True)
-    airlineIATA = Unicode(min_occurs=0, max_occurs=1, nillable=True)
-    flightNumber = Unicode(min_occurs=0, max_occurs=1, nillable=True)
-
-    from_ = Unicode(min_occurs=0, max_occurs=1, nillable=True)
-    fromAirport = Unicode(min_occurs=0, max_occurs=1, nillable=True)
-    fromAirportIATA = Unicode(min_occurs=0, max_occurs=1, nillable=True)
-
-    to = Unicode(min_occurs=0, max_occurs=1, nillable=False)
-    toAirport = Unicode(min_occurs=0, max_occurs=1, nillable=False)
-    toAirportIATA = Unicode(min_occurs=0, max_occurs=1, nillable=False)
-
-    arrivalDateTime = DateTime(min_occurs=0, max_occurs=1, nillable=True)
-    departureDatetime = DateTime(min_occurs=0, max_occurs=1, nillable=False)
-
-    AV = Array(AV.customize(nillable=True))
-    map = Unicode(min_occurs=0, max_occurs=1, nillable=False)
+"""clase AV"""
+od = odict()
+od['key'] = Unicode(min_occurs=1, max_occurs=1, nillable=False)
+od['value'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
+AV = ComplexModelBase.produce('str', 'AV', od)
 
 
-class Fare(ComplexModel):
+"""
+<str:map>
+                  <!--1 or more repetitions:-->
+                  <str:rows>
+                     <!--1 or more repetitions:-->
+                     <str:seats>
+                        <str:seat>?</str:seat>
+                        <str:seatCode>?</str:seatCode>
+                        <str:availability>?</str:availability>
+                     </str:seats>
+                  </str:rows>
+                  <str:numRows>?</str:numRows>
+                  <str:numCols>?</str:numCols>
+                  <str:numSeats>?</str:numSeats>
+                  <!--Optional:-->
+                  <str:name>?</str:name>
+               </str:map>
+"""
 
-    type = Unicode(min_occurs=1, max_occurs=1, nillable=True)
-    fare_class = Unicode(min_occurs=0, max_occurs=1, nillable=True)
-    fare_name = Unicode(min_occurs=0, max_occurs=1, nillable=True)
-    fare_price = Float(min_occurs=0, max_occurs=1, nillable=True)
-    currency = Unicode(min_occurs=0, max_occurs=1, nillable=True)
-    exchange_rate = Unicode(min_occurs=0, max_occurs=1, nillable=True)
-    fare_book = Unicode(min_occurs=0, max_occurs=1, nillable=True)
-    AV = Array(AV.customize(nillable=True))
-    rules = Unicode(min_occurs=0, max_occurs=1, nillable=True)
-    return_ = Unicode(min_occurs=0, max_occurs=1, nillable=True)
-    connection = Unicode(min_occurs=0, max_occurs=1, nillable=True)
+od = odict()
+od['seat'] = Unicode(min_occurs=1, max_occurs=1, nillable=False)
+od['seatCode'] = Unicode(min_occurs=1, max_occurs=1, nillable=False)
+od['availability'] = Unicode(min_occurs=1, max_occurs=1, nillable=False)
+Seats = ComplexModelBase.produce('str', 'seats', od)
 
+od = odict()
+od['rows'] = Array(Seats.customize(min_occurs=1, nillable=False))
+od['numRows'] = Unicode(min_occurs=1, max_occurs=1, nillable=False)
+od['numCols'] = Unicode(min_occurs=1, max_occurs=1, nillable=False)
+od['numSeats'] = Unicode(min_occurs=1, max_occurs=1, nillable=False)
+od['name'] = Unicode(min_occurs=1, max_occurs=1, nillable=True)
+Map = ComplexModelBase.produce('str', 'map', od)
+
+"""clase Connection"""
+od = odict()
+od['index'] = Unicode(min_occurs=1, max_occurs=1, nillable=False)
+od['airline'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
+od['airlineIATA'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
+od['from'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
+od['fromAirport'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
+od['fromAirportIATA'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
+od['to'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
+od['toAirport'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
+od['toAirportIATA'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
+od['departureDatetime'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
+od['arrivalDatetime'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
+od['flightNumber'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
+od['map'] = Array(Map.customize(min_occurs=0, max_occurs=1, nillable=False))
+od['AV'] = Array(AV.customize(min_occurs=0, max_occurs=1, nillable=False))
+Connection = ComplexModelBase.produce('str', 'lConnections', od)
+
+"""clase rules"""
+od = odict()
+od['ruleName'] = Unicode(min_occurs=1, max_occurs=1, nillable=False)
+od['rules'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
+Fare = ComplexModelBase.produce('str', 'rules', od)
+
+"""clase Fare"""
+od = odict()
+od['type'] = Unicode(min_occurs=1, max_occurs=1, nillable=False)
+od['fareClass'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
+od['fareName'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
+od['farePrice'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
+od['currency'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
+od['exchangeRate'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
+od['fareBook'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
+od['AV'] =  Array(AV.customize(nillable=True))
+od['rules'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
+od['return'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
+od['connection'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
+Fare = ComplexModelBase.produce('str', 'lFares', od)
 
 class Auth(ComplexModel):
 
+    __namespace__ = 'flig'
     session = Unicode(min_occurs=1, max_occurs=1, nillable=False)
     gcp = Unicode(min_occurs=1, max_occurs=1, nillable=False)
     userId = Unicode(min_occurs=1, max_occurs=1, nillable=False)
@@ -110,7 +147,7 @@ class Auth(ComplexModel):
 
 class Flight(ComplexModel):
 
-    __namespace__ = 'testing'
+    __namespace__ = 'flig'
     Index = Integer(min_occurs=0, max_occurs=1, nillable=True)
     flightNumber = Unicode(min_occurs=0, max_occurs=1, nillable=True)
     airline = Unicode(min_occurs=0, max_occurs=1, nillable=True)
@@ -137,7 +174,7 @@ class Flight(ComplexModel):
 
 #  Clase que representa el input de GetFlights
 class GetFlights(ComplexModel):
-
+    __namespace__ = 'flig'
     auth = Auth(min_occurs=1, max_occurs=1, nillable=False)
     flight = Flight(min_occurs=1, max_occurs=1, nillable=False)
 
@@ -195,9 +232,9 @@ class GetFlightService(spyne.Service):
     __in_protocol__ = Soap11(validator='lxml')
     __out_protocol__ = out_protocol = Soap11()
 
+    __namespace__ = 'flig'
     @spyne.srpc(Auth, Flight,  _returns=GetFlightsResponse)
-    def get_flights(auth, flight):
-
+    def getFlights(auth, flight):
         request_json = generate_json_request_get_flights(auth, flight)
 
         headers = {'Content-type': 'application/json'}
@@ -208,16 +245,9 @@ class GetFlightService(spyne.Service):
 
         return get_flights_response
 
-class GetDestinationService(spyne.Service):
-
-    __service_url_path__ = '/get/destinations'
-    __in_protocol__ = Soap11(validator='lxml')
-    __out_protocol__ = out_protocol = Soap11()
-
     @spyne.srpc(String, _returns=GetDestinationResponse)
-    def get_destinations(city):
-
-        url = 'http://localhost:5000/get/destinations?city='+city
+    def getDestinations(city):
+        url = 'http://localhost:5000/get/destinations?city=' + city
 
         headers = {'Content-type': 'application/json'}
         response_json = requests.get(url, headers=headers)
