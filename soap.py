@@ -179,6 +179,8 @@ def generate_get_flights_response(response_json):
     if response_json["error"] == "OK":
         #  Por cada flight recibido, voy a recorrer tambien sus conexiones y fares y agregarlas a la respuesta
         for f in response_json["flights"]:
+            f = json.dumps(f)
+            print(f)
             new_flight = Flight()
             new_flight.from_ = f["from"]
             new_flight.to = f["to"]
