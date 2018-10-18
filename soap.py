@@ -108,15 +108,21 @@ od['toAirportIATA'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
 od['departureDatetime'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
 od['arrivalDatetime'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
 od['flightNumber'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
-od['map'] = Array(Map.customize(min_occurs=0, max_occurs=1, nillable=False))
+od['map'] = Map.customize(min_occurs=0, max_occurs='unbound', nillable=True)
 od['AV'] = Array(AV.customize(min_occurs=0, max_occurs=1, nillable=False))
 Connection = ComplexModelBase.produce('str', 'lConnections', od)
+
+"""clase ruless""" #TODO revisar esto con nico
+od = odict()
+od['key'] = Unicode(min_occurs=1, max_occurs=1, nillable=False)
+od['value'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
+RulesChild = ComplexModelBase.produce('str', 'ruless', od)
 
 """clase rules"""
 od = odict()
 od['ruleName'] = Unicode(min_occurs=1, max_occurs=1, nillable=False)
-od['rules'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
-Fare = ComplexModelBase.produce('str', 'rules', od)
+od['rules'] = Array(RulesChild.customize(min_occurs=0, max_occurs='unbounded', nillable=False))
+Rules = ComplexModelBase.produce('str', 'rules', od)
 
 """clase Fare"""
 od = odict()
@@ -127,56 +133,61 @@ od['farePrice'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
 od['currency'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
 od['exchangeRate'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
 od['fareBook'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
-od['AV'] =  Array(AV.customize(nillable=True))
-od['rules'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
+od['AV'] = AV.customize(min_occurs=0, max_occurs='unbounded', nillable=True)
+od['rules'] = Rules.customize(min_occurs=0, max_occurs='unbounded', nillable=True)
 od['return'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
 od['connection'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
 Fare = ComplexModelBase.produce('str', 'lFares', od)
 
-class Auth(ComplexModel):
+"""clase Auth"""
+od = odict()
+od['session'] = Unicode(min_occurs=1, max_occurs=1, nillable=False)
+od['gcp'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
+od['userId'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
+od['userName'] = Integer(min_occurs=1, max_occurs=1, nillable=True)
+od['user'] = Integer(min_occurs=1, max_occurs=1, nillable=True)
+od['password'] = Integer(min_occurs=1, max_occurs=1, nillable=True)
+od['ip'] = Integer(min_occurs=1, max_occurs=1, nillable=True)
+Auth = ComplexModelBase.produce('str', 'auth', od)
 
-    __namespace__ = 'flig'
-    session = Unicode(min_occurs=1, max_occurs=1, nillable=False)
-    gcp = Unicode(min_occurs=1, max_occurs=1, nillable=False)
-    userId = Unicode(min_occurs=1, max_occurs=1, nillable=False)
-    userName = Unicode(min_occurs=0, max_occurs=1, nillable=True)
-    user = Unicode(min_occurs=0, max_occurs=1, nillable=True)
-    password = Unicode(min_occurs=0, max_occurs=1, nillable=True)
-    ip = Unicode(min_occurs=1, max_occurs=1, nillable=True)
+"""clase schedule"""
+od = odict()
+od['name'] = Unicode(min_occurs=1, max_occurs=1, nillable=False)
+od['start'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
+od['end'] = Integer(min_occurs=1, max_occurs=1, nillable=False)
+Schedule = ComplexModelBase.produce('str', 'schedule', od)
 
+"""clase flight"""
+od = odict()
+od['index'] = Integer(min_occurs=0, max_occurs=1, nillable=True)
+od['flightNumber'] = Unicode(min_occurs=0, max_occurs=1, nillable=True)
+od['airline'] = Unicode(min_occurs=0, max_occurs=1, nillable=True)
+od['airlineIATA'] = Unicode(min_occurs=0, max_occurs=1, nillable=True)
+od['from'] = Unicode(min_occurs=0, max_occurs=1, nillable=False)
+od['to'] = Unicode(min_occurs=0, max_occurs=1, nillable=False)
+od['departureDatetime'] = Unicode(min_occurs=0, max_occurs=1, nillable=False)
+od['arrivalDatetime'] = Unicode(min_occurs=0, max_occurs=1, nillable=True)
+od['lConnections'] = Connection.customize(min_occurs=0, max_occurs='unbounded', nillable=True)
+od['lFares'] = Fare.customize(min_occurs=0, max_occurs='unbounded', nillable=True)
+od['validReturns'] = Unicode(min_occurs=0, max_occurs='unbounded', nillable=True)
+od['nAdult'] = Integer(min_occurs=0, max_occurs=1, nillable=False)
+od['nChild'] = Integer(min_occurs=0, max_occurs=1, nillable=True)
+od['nInfant'] = Integer(min_occurs=0, max_occurs=1, nillable=True)
+od['AV'] = AV.customize(min_occurs=0, max_occurs='unbounded', nillable=True)
+od['type'] = Unicode(min_occurs=0, max_occurs=1, nillable=False)
+od['return'] = Boolean(min_occurs=0, max_occurs=1, nillable=False)
+od['schedule'] = Schedule.customize(min_occurs=0, max_occurs=1, nillable=True)
+od['range'] = Unicode(min_occurs=0, max_occurs=1, nillable=False)
+od['info'] = Unicode(min_occurs=0, max_occurs=1, nillable=False)
 
-class Flight(ComplexModel):
+Flight = ComplexModelBase.produce('str', 'flight', od)
 
-    __namespace__ = 'flig'
-    Index = Integer(min_occurs=0, max_occurs=1, nillable=True)
-    flightNumber = Unicode(min_occurs=0, max_occurs=1, nillable=True)
-    airline = Unicode(min_occurs=0, max_occurs=1, nillable=True)
-    airlineIATA = Unicode(min_occurs=0, max_occurs=1, nillable=True)
-    flightNumber = Unicode(min_occurs=0, max_occurs=1, nillable=True)
-    nChild = Integer(min_occurs=0, max_occurs=1, nillable=True)
-    nInfant = Integer(min_occurs=0, max_occurs=1, nillable=True)
-    arrivalDateTime = Unicode(min_occurs=0, max_occurs=1, nillable=True)
+"""clase GetFlights"""
+od = odict()
+od['auth'] = Connection.customize(min_occurs=1, max_occurs=1, nillable=False)
+od['flight'] = Flight.customize(min_occurs=1, max_occurs=1, nillable=False)
 
-    from_ = Unicode(min_occurs=0, max_occurs=1, nillable=False)
-    to = Unicode(min_occurs=0, max_occurs=1, nillable=False)
-    departureDatetime = Unicode(min_occurs=0, max_occurs=1, nillable=False)
-    nAdult = Integer(min_occurs=0, max_occurs=1, nillable=False)
-    AV = Array(AV.customize(nillable=True))
-    LConnections = Array(Connection.customize(nillable=True))
-    LFares = Array(Fare.customize(nillable=True))
-
-    validReturns = Array(Unicode(min_occurs=0, max_occurs=1, nillable=False))
-    type = Unicode(min_occurs=0, max_occurs=1, nillable=False)
-    return_ = Boolean(min_occurs=0, max_occurs=1, nillable=False)
-    schedule = Unicode(min_occurs=0, max_occurs=1, nillable=False)
-    range = Unicode(min_occurs=0, max_occurs=1, nillable=False)
-    info = Unicode(min_occurs=0, max_occurs=1, nillable=False)
-
-#  Clase que representa el input de GetFlights
-class GetFlights(ComplexModel):
-    __namespace__ = 'flig'
-    auth = Auth(min_occurs=1, max_occurs=1, nillable=False)
-    flight = Flight(min_occurs=1, max_occurs=1, nillable=False)
+GetFlights = ComplexModelBase.produce('str', 'getFlights', od)
 
 #  Clase que representa el output de GetFlights
 class GetFlightsResponse(ComplexModel):
@@ -226,13 +237,12 @@ class GetDestinationResponse(ComplexModel):
 class ErrorResponse(ComplexModel):
     Error = Unicode(min_occurs=1, max_occurs=1, nillable=False)
 
-class GetFlightService(spyne.Service):
+class flightSOAP(spyne.Service):
 
     __service_url_path__ = '/test/get/flight'
     __in_protocol__ = Soap11(validator='lxml')
     __out_protocol__ = out_protocol = Soap11()
 
-    __namespace__ = 'flig'
     @spyne.srpc(Auth, Flight,  _returns=GetFlightsResponse)
     def getFlights(auth, flight):
         request_json = generate_json_request_get_flights(auth, flight)
