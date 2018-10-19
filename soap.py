@@ -154,13 +154,15 @@ od = odict()
 od['auth'] = Auth.customize(min_occurs=1, max_occurs=1, nillable=False)
 od['flight'] = Flight.customize(min_occurs=1, max_occurs=1, nillable=False)
 
-GetFlightsRequest = ComplexModelBase.produce(global_namespace, 'getFlights', od)
+#GetFlightsRequest = ComplexModelBase.produce(global_namespace, 'getFlights', od)
+GetFlights = ComplexModelBase.produce(global_namespace, 'GetFlights', od)
 
 """clase GetFlightsResponse"""
 od = odict()
 od['error'] = Unicode.customize(min_occurs=1, nillable=False)
 od['flights'] = Flight.customize(min_occurs=0, max_occurs='unbounded', nillable=True)
 
+#GetFlightsResponse = ComplexModelBase.produce(global_namespace, 'GetFlightsResponse', od)
 GetFlightsResponse = ComplexModelBase.produce(global_namespace, 'GetFlightsResponse', od)
 
 
@@ -210,8 +212,7 @@ class flightSOAP(spyne.Service):
     __in_protocol__ = Soap11(validator='lxml')
     __out_protocol__ = out_protocol = Soap11()
 
-    @spyne.srpc(GetFlightsRequest,
-                _in_message_name="getFlightsRequest",
+    @spyne.srpc(GetFlights, _in_message_name="getFlightsRequest",
                 _returns=GetFlightsResponse,
                 _body_style='bare')
 
