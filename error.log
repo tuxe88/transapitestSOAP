@@ -18,3 +18,591 @@ NotFound: 404 Not Found: The requested URL was not found on the server.  If you 
     raise request.routing_exception
 NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
  
+2018-10-18 13:32:27,069 | C:\microblet\transoftSOAP\soap.py:39 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 13:32:27,078 | C:\microblet\transoftSOAP\soap.py:40 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 13:42:22,502 | C:\microblet\transoftSOAP\soap.py:39 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 13:42:22,503 | C:\microblet\transoftSOAP\soap.py:40 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 13:46:25,990 | C:\microblet\transoftSOAP\soap.py:39 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 13:46:25,990 | C:\microblet\transoftSOAP\soap.py:40 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 13:48:30,944 | C:\microblet\transoftSOAP\soap.py:39 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 13:48:30,944 | C:\microblet\transoftSOAP\soap.py:40 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 13:49:36,453 | C:\microblet\transoftSOAP\soap.py:39 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 13:49:36,454 | C:\microblet\transoftSOAP\soap.py:40 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 13:50:05,811 | C:\microblet\transoftSOAP\soap.py:39 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 13:50:05,812 | C:\microblet\transoftSOAP\soap.py:40 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 13:50:11,907 | C:\microblet\transoftSOAP\soap.py:39 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 13:50:11,908 | C:\microblet\transoftSOAP\soap.py:40 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 13:50:28,516 | C:\microblet\transoftSOAP\soap.py:39 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 13:50:28,516 | C:\microblet\transoftSOAP\soap.py:40 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 13:51:49,670 | C:\microblet\transoftSOAP\soap.py:39 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 13:51:49,671 | C:\microblet\transoftSOAP\soap.py:40 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 13:53:16,154 | C:\microblet\transoftSOAP\soap.py:39 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 13:53:16,154 | C:\microblet\transoftSOAP\soap.py:40 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 13:57:16,326 | C:\microblet\transoftSOAP\soap.py:39 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 13:57:16,328 | C:\microblet\transoftSOAP\soap.py:40 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 14:03:25,940 | C:\microblet\transoftSOAP\soap.py:39 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 14:03:25,940 | C:\microblet\transoftSOAP\soap.py:39 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 14:03:25,940 | C:\microblet\transoftSOAP\soap.py:39 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 14:03:25,940 | C:\microblet\transoftSOAP\soap.py:40 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 14:03:25,940 | C:\microblet\transoftSOAP\soap.py:40 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 14:03:25,940 | C:\microblet\transoftSOAP\soap.py:40 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 14:05:47,857 | C:\microblet\transoftSOAP\soap.py:39 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 14:05:47,857 | C:\microblet\transoftSOAP\soap.py:39 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 14:05:47,858 | C:\microblet\transoftSOAP\soap.py:40 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 14:05:47,858 | C:\microblet\transoftSOAP\soap.py:40 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 14:07:19,736 | C:\microblet\transoftSOAP\soap.py:39 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 14:07:19,737 | C:\microblet\transoftSOAP\soap.py:40 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 14:08:51,628 | C:\microblet\transoftSOAP\soap.py:39 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 14:08:51,628 | C:\microblet\transoftSOAP\soap.py:40 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 14:09:28,338 | C:\microblet\transoftSOAP\soap.py:39 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 14:09:28,338 | C:\microblet\transoftSOAP\soap.py:40 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 14:10:53,746 | C:\microblet\transoftSOAP\soap.py:39 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 14:10:53,747 | C:\microblet\transoftSOAP\soap.py:40 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 16:15:12,786 | C:\microblet\transoftSOAP\soap.py:40 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 16:15:12,786 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 16:15:13,292 | C:\microblet\transoftSOAP\soap.py:40 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 16:15:13,292 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 16:15:13,444 | C:\microblet\transoftSOAP\soap.py:40 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 16:15:13,446 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 16:15:13,621 | C:\microblet\transoftSOAP\soap.py:40 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 16:15:13,621 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 16:15:13,780 | C:\microblet\transoftSOAP\soap.py:40 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 16:15:13,782 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 16:17:31,802 | C:\microblet\transoftSOAP\soap.py:40 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 16:17:31,802 | C:\microblet\transoftSOAP\soap.py:40 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 16:17:31,802 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 16:17:31,802 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 16:34:41,082 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 16:34:41,082 | C:\microblet\transoftSOAP\soap.py:42 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 16:36:12,351 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 16:36:12,352 | C:\microblet\transoftSOAP\soap.py:42 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 16:37:03,016 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 16:37:03,016 | C:\microblet\transoftSOAP\soap.py:42 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 16:37:16,976 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 16:37:16,976 | C:\microblet\transoftSOAP\soap.py:42 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 16:38:46,071 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 16:38:46,072 | C:\microblet\transoftSOAP\soap.py:42 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 16:39:23,499 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 16:39:23,500 | C:\microblet\transoftSOAP\soap.py:42 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 16:39:24,019 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 16:39:24,019 | C:\microblet\transoftSOAP\soap.py:42 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 16:43:54,249 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 16:43:54,250 | C:\microblet\transoftSOAP\soap.py:42 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 16:44:33,075 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 16:44:33,075 | C:\microblet\transoftSOAP\soap.py:42 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 16:44:43,361 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 16:44:43,361 | C:\microblet\transoftSOAP\soap.py:42 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 16:45:16,615 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 16:45:16,615 | C:\microblet\transoftSOAP\soap.py:42 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 16:46:32,526 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 16:46:32,526 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 16:46:32,528 | C:\microblet\transoftSOAP\soap.py:42 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 16:46:32,528 | C:\microblet\transoftSOAP\soap.py:42 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 16:47:32,720 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 16:47:32,723 | C:\microblet\transoftSOAP\soap.py:42 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 16:47:56,486 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 16:47:56,486 | C:\microblet\transoftSOAP\soap.py:42 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 16:48:19,799 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 16:48:19,799 | C:\microblet\transoftSOAP\soap.py:42 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 16:54:40,095 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 16:54:40,095 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 16:54:40,095 | C:\microblet\transoftSOAP\soap.py:42 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 16:54:40,095 | C:\microblet\transoftSOAP\soap.py:42 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 16:57:15,173 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 16:57:15,173 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 16:57:15,174 | C:\microblet\transoftSOAP\soap.py:42 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 16:57:15,174 | C:\microblet\transoftSOAP\soap.py:42 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 16:57:53,127 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 16:57:53,128 | C:\microblet\transoftSOAP\soap.py:42 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 16:58:11,328 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 16:58:11,328 | C:\microblet\transoftSOAP\soap.py:42 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 16:58:50,529 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 16:58:50,530 | C:\microblet\transoftSOAP\soap.py:42 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 17:06:37,263 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 17:06:37,266 | C:\microblet\transoftSOAP\soap.py:42 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 17:08:38,730 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 17:08:38,730 | C:\microblet\transoftSOAP\soap.py:42 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 17:09:16,950 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 17:09:16,951 | C:\microblet\transoftSOAP\soap.py:42 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 17:11:37,086 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 17:11:37,088 | C:\microblet\transoftSOAP\soap.py:42 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 18:33:04,255 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 18:33:04,256 | C:\microblet\transoftSOAP\soap.py:42 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 18:33:14,813 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 18:33:14,815 | C:\microblet\transoftSOAP\soap.py:42 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 18:33:30,371 | C:\microblet\transoftSOAP\soap.py:41 | handle_error | ERROR | 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again. 
+2018-10-18 18:33:30,371 | C:\microblet\transoftSOAP\soap.py:42 | handle_error | ERROR | Traceback (most recent call last):
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\microblet\transoftsoap\venv\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+ 
+2018-10-18 20:25:59,227 | C:\microblet\transoftSOAP\soap.py:221 | getFlights | ERROR | {"flight": {"info": null, "index": "1", "from": "EZE", "lFares": null, "schedule": null, "airlineIATA": "", "flightNumber": "", "arrivalDatetime": "", "to": "LAX", "range": null, "validReturns": null, "nAdult": 1, "airline": "", "AV": [{"value": "cabinClass", "key": 1}], "return": [], "departureDatetime": "20/10/2018", "lConnections": null, "type": null, "lAction": ""}, "request": {"action": "", "carrier": "ecojet", "carrierName": ""}, "Auth": {"userName": "LIZETH VARGAS DAZA", "ip": "181.115.248.23", "userId": "8167", "gcp": "45810150", "session": "90-97", "user": "ldazavargas", "password": "daza12345"}} 
+2018-10-18 20:29:16,631 | C:\microblet\transoftSOAP\soap.py:221 | getFlights | ERROR | {"flight": {"info": null, "index": "1", "from": "EZE", "lFares": null, "schedule": null, "airlineIATA": "", "flightNumber": "", "arrivalDatetime": "", "to": "LAX", "range": null, "validReturns": null, "nAdult": 1, "airline": "", "AV": [{"value": "cabinClass", "key": 1}], "return": [], "departureDatetime": "20/10/2018", "lConnections": null, "type": null, "lAction": ""}, "request": {"action": "", "carrier": "ecojet", "carrierName": ""}, "Auth": {"userName": "LIZETH VARGAS DAZA", "ip": "181.115.248.23", "userId": "8167", "gcp": "45810150", "session": "90-97", "user": "ldazavargas", "password": "daza12345"}} 
+2018-10-18 20:31:42,585 | C:\microblet\transoftSOAP\soap.py:221 | getFlights | ERROR | {"flight": {"info": null, "index": "1", "from": "EZE", "lFares": null, "schedule": null, "airlineIATA": "", "flightNumber": "", "arrivalDatetime": "", "to": "LAX", "range": null, "validReturns": null, "nAdult": 1, "airline": "", "AV": [{"value": "cabinClass", "key": 1}], "return": [], "departureDatetime": "20/10/2018", "lConnections": null, "type": null, "lAction": ""}, "request": {"action": "", "carrier": "ecojet", "carrierName": ""}, "Auth": {"userName": "LIZETH VARGAS DAZA", "ip": "181.115.248.23", "userId": "8167", "gcp": "45810150", "session": "90-97", "user": "ldazavargas", "password": "daza12345"}} 
+2018-10-18 20:37:33,259 | C:\microblet\transoftSOAP\soap.py:221 | getFlights | ERROR | {"flight": {"info": null, "index": "1", "from": "EZE", "lFares": null, "schedule": null, "airlineIATA": "", "flightNumber": "", "arrivalDatetime": "", "to": "LAX", "range": null, "validReturns": null, "nAdult": 1, "airline": "", "AV": [{"value": 1, "key": "cabinClass"}], "return": [], "departureDatetime": "20/10/2018", "lConnections": null, "type": null, "lAction": ""}, "request": {"action": "", "carrier": "ecojet", "carrierName": ""}, "Auth": {"userName": "LIZETH VARGAS DAZA", "ip": "181.115.248.23", "userId": "8167", "gcp": "45810150", "session": "90-97", "user": "ldazavargas", "password": "daza12345"}} 
+2018-10-18 20:37:44,249 | C:\microblet\transoftSOAP\soap.py:221 | getFlights | ERROR | {"flight": {"info": null, "index": "1", "from": "EZE", "lFares": null, "schedule": null, "airlineIATA": "", "flightNumber": "", "arrivalDatetime": "", "to": "LAX", "range": null, "validReturns": null, "nAdult": 1, "airline": "", "AV": [{"value": 1, "key": "cabinClass"}], "return": [], "departureDatetime": "20/10/2018", "lConnections": null, "type": null, "lAction": ""}, "request": {"action": "", "carrier": "ecojet", "carrierName": ""}, "Auth": {"userName": "LIZETH VARGAS DAZA", "ip": "181.115.248.23", "userId": "8167", "gcp": "45810150", "session": "90-97", "user": "ldazavargas", "password": "daza12345"}} 
+2018-10-18 20:38:41,072 | C:\microblet\transoftSOAP\soap.py:221 | getFlights | ERROR | {"flight": {"info": null, "index": "1", "from": "EZE", "lFares": null, "schedule": null, "airlineIATA": "", "flightNumber": "", "arrivalDatetime": "", "to": "LAX", "range": null, "validReturns": null, "nAdult": 1, "airline": "", "AV": [{"value": 1, "key": "cabinClass"}], "return": [], "departureDatetime": "20/10/2018", "lConnections": null, "type": null, "lAction": ""}, "request": {"action": "", "carrier": "ecojet", "carrierName": ""}, "Auth": {"userName": "LIZETH VARGAS DAZA", "ip": "181.115.248.23", "userId": "8167", "gcp": "45810150", "session": "90-97", "user": "ldazavargas", "password": "daza12345"}} 
+2018-10-18 20:40:35,384 | C:\microblet\transoftSOAP\soap.py:221 | getFlights | ERROR | {"flight": {"info": null, "index": "1", "from": "EZE", "lFares": null, "schedule": null, "airlineIATA": "", "flightNumber": "", "arrivalDatetime": "", "to": "LAX", "range": null, "validReturns": null, "nAdult": 1, "airline": "", "AV": [{"value": 1, "key": "cabinClass"}], "return": [], "departureDatetime": "20/10/2018", "lConnections": null, "type": null, "lAction": ""}, "request": {"action": "", "carrier": "ecojet", "carrierName": ""}, "Auth": {"userName": "LIZETH VARGAS DAZA", "ip": "181.115.248.23", "userId": "8167", "gcp": "45810150", "session": "90-97", "user": "ldazavargas", "password": "daza12345"}} 
+2018-10-18 20:40:44,928 | C:\microblet\transoftSOAP\soap.py:221 | getFlights | ERROR | {"flight": {"info": null, "index": "1", "from": "EZE", "lFares": null, "schedule": null, "airlineIATA": "", "flightNumber": "", "arrivalDatetime": "", "to": "LAX", "range": null, "validReturns": null, "nAdult": 1, "airline": "", "AV": [{"value": 1, "key": "cabinClass"}], "return": [], "departureDatetime": "20/10/2018", "lConnections": null, "type": null, "lAction": ""}, "request": {"action": "", "carrier": "ecojet", "carrierName": ""}, "Auth": {"userName": "LIZETH VARGAS DAZA", "ip": "181.115.248.23", "userId": "8167", "gcp": "45810150", "session": "90-97", "user": "ldazavargas", "password": "daza12345"}} 
+2018-10-18 20:41:32,700 | C:\microblet\transoftSOAP\soap.py:221 | getFlights | ERROR | {"flight": {"info": null, "index": "1", "from": "EZE", "lFares": null, "schedule": null, "airlineIATA": "", "flightNumber": "", "arrivalDatetime": "", "to": "LAX", "range": null, "validReturns": null, "nAdult": 1, "airline": "", "AV": [{"value": 1, "key": "cabinClass"}], "return": [], "departureDatetime": "20/10/2018", "lConnections": null, "type": null, "lAction": ""}, "request": {"action": "", "carrier": "ecojet", "carrierName": ""}, "Auth": {"userName": "LIZETH VARGAS DAZA", "ip": "181.115.248.23", "userId": "8167", "gcp": "45810150", "session": "90-97", "user": "ldazavargas", "password": "daza12345"}} 
+2018-10-18 20:41:56,505 | C:\microblet\transoftSOAP\soap.py:221 | getFlights | ERROR | {"flight": {"info": null, "index": "1", "from": "EZE", "lFares": null, "schedule": null, "airlineIATA": "", "flightNumber": "", "arrivalDatetime": "", "to": "LAX", "range": null, "validReturns": null, "nAdult": 1, "airline": "", "AV": [{"value": 1, "key": "cabinClass"}], "return": [], "departureDatetime": "20/10/2018", "lConnections": null, "type": null, "lAction": ""}, "request": {"action": "", "carrier": "ecojet", "carrierName": ""}, "Auth": {"userName": "LIZETH VARGAS DAZA", "ip": "181.115.248.23", "userId": "8167", "gcp": "45810150", "session": "90-97", "user": "ldazavargas", "password": "daza12345"}} 
+2018-10-18 20:42:22,273 | C:\microblet\transoftSOAP\soap.py:221 | getFlights | ERROR | {"flight": {"info": null, "index": "1", "from": "EZE", "lFares": null, "schedule": null, "airlineIATA": "", "flightNumber": "", "arrivalDatetime": "", "to": "LAX", "range": null, "validReturns": null, "nAdult": 1, "airline": "", "AV": [{"value": 1, "key": "cabinClass"}], "return": [], "departureDatetime": "20/10/2018", "lConnections": null, "type": null, "lAction": ""}, "request": {"action": "", "carrier": "ecojet", "carrierName": ""}, "Auth": {"userName": "LIZETH VARGAS DAZA", "ip": "181.115.248.23", "userId": "8167", "gcp": "45810150", "session": "90-97", "user": "ldazavargas", "password": "daza12345"}} 
+2018-10-18 20:42:38,816 | C:\microblet\transoftSOAP\soap.py:221 | getFlights | ERROR | {"flight": {"info": null, "index": "1", "from": "EZE", "lFares": null, "schedule": null, "airlineIATA": "", "flightNumber": "", "arrivalDatetime": "", "to": "LAX", "range": null, "validReturns": null, "nAdult": 1, "airline": "", "AV": [{"value": 1, "key": "cabinClass"}], "return": [], "departureDatetime": "20/10/2018", "lConnections": null, "type": null, "lAction": ""}, "request": {"action": "", "carrier": "ecojet", "carrierName": ""}, "Auth": {"userName": "LIZETH VARGAS DAZA", "ip": "181.115.248.23", "userId": "8167", "gcp": "45810150", "session": "90-97", "user": "ldazavargas", "password": "daza12345"}} 
+2018-10-18 20:45:00,073 | C:\microblet\transoftSOAP\soap.py:221 | getFlights | ERROR | {"flight": {"info": null, "index": "1", "from": "EZE", "lFares": null, "schedule": null, "airlineIATA": "", "flightNumber": "", "arrivalDatetime": "", "to": "LAX", "range": null, "validReturns": null, "nAdult": 1, "airline": "", "AV": [{"value": 1, "key": "cabinClass"}], "return": [], "departureDatetime": "20/10/2018", "lConnections": null, "type": null, "lAction": ""}, "request": {"action": "", "carrier": "ecojet", "carrierName": ""}, "Auth": {"userName": "LIZETH VARGAS DAZA", "ip": "181.115.248.23", "userId": "8167", "gcp": "45810150", "session": "90-97", "user": "ldazavargas", "password": "daza12345"}} 
+2018-10-18 20:46:47,411 | C:\microblet\transoftSOAP\soap.py:221 | getFlights | ERROR | {"flight": {"info": null, "index": "1", "from": "EZE", "lFares": null, "schedule": null, "airlineIATA": "", "flightNumber": "", "arrivalDatetime": "", "to": "LAX", "range": null, "validReturns": null, "nAdult": 1, "airline": "", "AV": [{"value": 1, "key": "cabinClass"}], "return": [], "departureDatetime": "20/10/2018", "lConnections": null, "type": null, "lAction": ""}, "request": {"action": "", "carrier": "ecojet", "carrierName": ""}, "Auth": {"userName": "LIZETH VARGAS DAZA", "ip": "181.115.248.23", "userId": "8167", "gcp": "45810150", "session": "90-97", "user": "ldazavargas", "password": "daza12345"}} 
+2018-10-18 20:48:04,313 | C:\microblet\transoftSOAP\soap.py:221 | getFlights | ERROR | {"flight": {"info": null, "index": "1", "from": "EZE", "lFares": null, "schedule": null, "airlineIATA": "", "flightNumber": "", "arrivalDatetime": "", "to": "LAX", "range": null, "validReturns": null, "nAdult": 1, "airline": "", "AV": [{"value": 1, "key": "cabinClass"}], "return": [], "departureDatetime": "20/10/2018", "lConnections": null, "type": null, "lAction": ""}, "request": {"action": "", "carrier": "ecojet", "carrierName": ""}, "Auth": {"userName": "LIZETH VARGAS DAZA", "ip": "181.115.248.23", "userId": "8167", "gcp": "45810150", "session": "90-97", "user": "ldazavargas", "password": "daza12345"}} 
+2018-10-18 20:49:04,173 | C:\microblet\transoftSOAP\soap.py:221 | getFlights | ERROR | {"flight": {"info": null, "index": "1", "from": "EZE", "lFares": null, "schedule": null, "airlineIATA": "", "flightNumber": "", "arrivalDatetime": "", "to": "LAX", "range": null, "validReturns": null, "nAdult": 1, "airline": "", "AV": [{"value": 1, "key": "cabinClass"}], "return": [], "departureDatetime": "20/10/2018", "lConnections": null, "type": null, "lAction": ""}, "request": {"action": "", "carrier": "ecojet", "carrierName": ""}, "Auth": {"userName": "LIZETH VARGAS DAZA", "ip": "181.115.248.23", "userId": "8167", "gcp": "45810150", "session": "90-97", "user": "ldazavargas", "password": "daza12345"}} 
+2018-10-18 20:50:15,322 | C:\microblet\transoftSOAP\soap.py:221 | getFlights | ERROR | {"flight": {"info": null, "index": "1", "from": "EZE", "lFares": null, "schedule": null, "airlineIATA": "", "flightNumber": "", "arrivalDatetime": "", "to": "LAX", "range": null, "validReturns": null, "nAdult": 1, "airline": "", "AV": [{"value": 1, "key": "cabinClass"}], "return": [], "departureDatetime": "20/10/2018", "lConnections": null, "type": null, "lAction": ""}, "request": {"action": "", "carrier": "ecojet", "carrierName": ""}, "Auth": {"userName": "LIZETH VARGAS DAZA", "ip": "181.115.248.23", "userId": "8167", "gcp": "45810150", "session": "90-97", "user": "ldazavargas", "password": "daza12345"}} 
+2018-10-18 20:50:22,914 | C:\microblet\transoftSOAP\soap.py:221 | getFlights | ERROR | {"flight": {"info": null, "index": "1", "from": "EZE", "lFares": null, "schedule": null, "airlineIATA": "", "flightNumber": "", "arrivalDatetime": "", "to": "LAX", "range": null, "validReturns": null, "nAdult": 1, "airline": "", "AV": [{"value": 1, "key": "cabinClass"}], "return": [], "departureDatetime": "20/10/2018", "lConnections": null, "type": null, "lAction": ""}, "request": {"action": "", "carrier": "ecojet", "carrierName": ""}, "Auth": {"userName": "LIZETH VARGAS DAZA", "ip": "181.115.248.23", "userId": "8167", "gcp": "45810150", "session": "90-97", "user": "ldazavargas", "password": "daza12345"}} 
