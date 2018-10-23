@@ -108,7 +108,7 @@ Fare = ComplexModelBase.produce(structure_namespace, 'Fare', od)
 
 """clase Auth"""
 od = odict()
-od['session'] = Unicode(min_occurs=1, max_occurs=1, nillable=True, default=' ')
+od['session'] = Unicode(min_occurs=1, max_occurs=1, nillable=True, default='')
 od['gcp'] = Unicode(min_occurs=1, max_occurs=1, nillable=True)
 od['userId'] = Unicode(min_occurs=1, max_occurs=1, nillable=True)
 od['userName'] = Unicode(min_occurs=0, max_occurs=1, nillable=True)
@@ -119,9 +119,9 @@ Auth = ComplexModelBase.produce(structure_namespace, 'Auth', od)
 
 """clase schedule"""
 od = odict()
-od['name'] = Unicode(min_occurs=1, max_occurs=1, nillable=False)
-od['start'] = Unicode(min_occurs=1, max_occurs=1, nillable=False)
-od['end'] = Unicode(min_occurs=1, max_occurs=1, nillable=False)
+od['name'] = Unicode(min_occurs=0, max_occurs=1, nillable=True)
+od['start'] = Unicode(min_occurs=0, max_occurs=1, nillable=True)
+od['end'] = Unicode(min_occurs=0, max_occurs=1, nillable=True)
 Schedule = ComplexModelBase.produce(structure_namespace, 'Schedule', od)
 
 """clase flight"""
@@ -141,11 +141,11 @@ od['nAdult'] = Integer(min_occurs=1, max_occurs=1, nillable=False, default=0)
 od['nChild'] = Integer(min_occurs=1, max_occurs=1, nillable=True, default=0)
 od['nInfant'] = Integer(min_occurs=1, max_occurs=1, nillable=True, default=0)
 od['AV'] = AV.customize(min_occurs=1, max_occurs='unbounded', nillable=True)
-od['type'] = Unicode(min_occurs=0, max_occurs=1, nillable=False)
+od['type'] = Unicode(min_occurs=0, max_occurs=1, nillable=True)
 od['return'] = Boolean(min_occurs=0, max_occurs=1, nillable=False, default=False)
 od['schedule'] = Schedule.customize(min_occurs=0, max_occurs=1, nillable=True)
-od['range'] = Unicode(min_occurs=0, max_occurs=1, nillable=False)
-od['info'] = Unicode(min_occurs=0, max_occurs=1, nillable=False)
+od['range'] = Unicode(min_occurs=0, max_occurs=1, nillable=True)
+od['info'] = Unicode(min_occurs=0, max_occurs=1, nillable=True)
 
 Flight = ComplexModelBase.produce(structure_namespace, 'Flight', od)
 
@@ -432,11 +432,12 @@ def generate_json_request_get_flights(auth, flight):
                 "type": flight.type,
                 "return": flight.as_dict().get("return", []),
                 "lAction": "",
-                "schedule": flight.schedule,
-                "range": flight.range,
-                "info": flight.info
+                "schedule": "",
+                "range": "",
+                "info": ""
 
         }
+        #Range, schedule e info son ignorados porque no se usan
     }
 
     return json.dumps(data_request)
