@@ -108,9 +108,9 @@ Fare = ComplexModelBase.produce(structure_namespace, 'Fare', od)
 
 """clase Auth"""
 od = odict()
-od['session'] = Unicode(min_occurs=1, max_occurs=1, nillable=False)
-od['gcp'] = Unicode(min_occurs=1, max_occurs=1, nillable=False)
-od['userId'] = Unicode(min_occurs=1, max_occurs=1, nillable=False)
+od['session'] = Unicode(min_occurs=1, max_occurs=1, nillable=True, default=' ')
+od['gcp'] = Unicode(min_occurs=1, max_occurs=1, nillable=True)
+od['userId'] = Unicode(min_occurs=1, max_occurs=1, nillable=True)
 od['userName'] = Unicode(min_occurs=0, max_occurs=1, nillable=True)
 od['user'] = Unicode(min_occurs=0, max_occurs=1, nillable=True)
 od['password'] = Unicode(min_occurs=0, max_occurs=1, nillable=True)
@@ -389,17 +389,18 @@ class AttributeT:
     read_only = False
 
 class TempT:
-    Attributes =  AttributeT()
+    Attributes = AttributeT()
 
 def generate_json_request_get_flights(auth, flight):
 
     json_av = []
     if flight.AV is not None:
         for av in flight.AV:
-            json_av.append({
-                'key': av.key,
-                'value': av.value
-            })
+            if av is not None:
+                json_av.append({
+                    'key': av.key,
+                    'value': av.value
+                })
 
     data_request = {
         "Auth": {
