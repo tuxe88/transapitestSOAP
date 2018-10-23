@@ -209,8 +209,8 @@ class GetDestinationResponse(ComplexModel):
 class flightSOAP(spyne.Service):
 
     __service_url_path__ = '/cnet/flight'
-    __in_protocol__ = Soap11(validator='lxml')
-    __out_protocol__ = out_protocol = Soap11()
+    __in_protocol__ = Soap11(validator='soft')
+    __out_protocol__ = Soap11()
 
     @spyne.srpc(GetFlights, _in_message_name="getFlightsRequest",
                 _returns=GetFlightsResponse,
