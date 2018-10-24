@@ -220,7 +220,7 @@ class flightSOAP(spyne.Service):
         request_json = generate_json_request_get_flights(GetFlightsRequest.auth, GetFlightsRequest.flight)
 
         headers = {'Content-type': 'application/json'}
-        response_json = requests.post('http://localhost:5000/temp/get/flight', data=request_json, headers=headers)
+        response_json = requests.post(os.getenv('HOST_GDSAPI')[:-1] + ':5000/temp/get/flight', data=request_json, headers=headers)
 
         response_json = json.loads(response_json.text)
 
