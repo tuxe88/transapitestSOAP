@@ -3,7 +3,7 @@ from spyne.model.primitive import Unicode, Integer, Boolean, Float, String, AnyX
 from spyne.model.complex import Iterable, ComplexModel,Array
 from spyne.model.primitive import DateTime,Date
 import json
-from parameters import *
+from instance import config
 from spyne.util.odict import odict
 
 """
@@ -15,18 +15,18 @@ from spyne.util.odict import odict
 od = odict()
 od['key'] = Unicode(min_occurs=1, nillable=False)
 od['value'] = Integer(min_occurs=1, max_occurs=1, nillable=True, default=0)
-AV = ComplexModelBase.produce(STRUCTURE_NAMESPACE, 'AV', od)
+AV = ComplexModelBase.produce(config.Config.STRUCTURE_NAMESPACE, 'AV', od)
 
 
 od = odict()
 od['seat'] = Unicode(min_occurs=1, max_occurs=1, nillable=False)
 od['seatCode'] = Unicode(min_occurs=1, max_occurs=1, nillable=False)
 od['availability'] = Unicode(min_occurs=1, max_occurs=1, nillable=False)
-Seat = ComplexModelBase.produce(STRUCTURE_NAMESPACE, 'Seat', od)
+Seat = ComplexModelBase.produce(config.Config.STRUCTURE_NAMESPACE, 'Seat', od)
 
 od = odict()
 od['seats'] = Seat.customize(min_occurs=1, max_occurs='unbounded', nillable=False)
-Row = ComplexModelBase.produce(STRUCTURE_NAMESPACE, 'Row', od)
+Row = ComplexModelBase.produce(config.Config.STRUCTURE_NAMESPACE, 'Row', od)
 
 od = odict()
 od['rows'] = Row.customize(min_occurs=1, max_occurs='unbounded', nillable=False)
@@ -34,7 +34,7 @@ od['numRows'] = Unicode(min_occurs=1, max_occurs=1, nillable=False)
 od['numCols'] = Unicode(min_occurs=1, max_occurs=1, nillable=False)
 od['numSeats'] = Unicode(min_occurs=1, max_occurs=1, nillable=False)
 od['name'] = Unicode(min_occurs=0, max_occurs=1, nillable=True)
-Map = ComplexModelBase.produce(STRUCTURE_NAMESPACE, 'Map', od)
+Map = ComplexModelBase.produce(config.Config.STRUCTURE_NAMESPACE, 'Map', od)
 
 """clase Connection"""
 od = odict()
@@ -52,14 +52,14 @@ od['arrivalDatetime'] = Unicode(min_occurs=1, max_occurs=1, nillable=False)
 od['flightNumber'] = Unicode(min_occurs=1, max_occurs=1, nillable=False)
 od['map'] = Map.customize(min_occurs=0, max_occurs='unbounded', nillable=True)
 od['AV'] = AV.customize(min_occurs=0, max_occurs='unbounded', nillable=True)
-Connection = ComplexModelBase.produce(STRUCTURE_NAMESPACE, 'Connection', od)
+Connection = ComplexModelBase.produce(config.Config.STRUCTURE_NAMESPACE, 'Connection', od)
 
 
 """clase rules"""
 od = odict()
 od['ruleName'] = Unicode(min_occurs=1, max_occurs=1, nillable=False)
 od['rules'] = AV.customize(min_occurs=0, max_occurs='unbounded', nillable=True)
-FareRule = ComplexModelBase.produce(STRUCTURE_NAMESPACE, 'FareRule', od)
+FareRule = ComplexModelBase.produce(config.Config.STRUCTURE_NAMESPACE, 'FareRule', od)
 
 """clase Fare"""
 od = odict()
@@ -74,7 +74,7 @@ od['AV'] = AV.customize(min_occurs=0, max_occurs='unbounded', nillable=True)
 od['rules'] = FareRule.customize(min_occurs=0, max_occurs='unbounded', nillable=True)
 od['return'] = Boolean(min_occurs=0, max_occurs=1, nillable=True, default=False)
 od['connection'] = Boolean(min_occurs=0, max_occurs=1, nillable=True, default=0)
-Fare = ComplexModelBase.produce(STRUCTURE_NAMESPACE, 'Fare', od)
+Fare = ComplexModelBase.produce(config.Config.STRUCTURE_NAMESPACE, 'Fare', od)
 
 """clase Auth"""
 od = odict()
@@ -85,14 +85,14 @@ od['userName'] = Unicode(min_occurs=0, max_occurs=1, nillable=True)
 od['user'] = Unicode(min_occurs=0, max_occurs=1, nillable=True)
 od['password'] = Unicode(min_occurs=0, max_occurs=1, nillable=True)
 od['ip'] = Unicode(min_occurs=0, max_occurs=1, nillable=True)
-Auth = ComplexModelBase.produce(STRUCTURE_NAMESPACE, 'Auth', od)
+Auth = ComplexModelBase.produce(config.Config.STRUCTURE_NAMESPACE, 'Auth', od)
 
 """clase schedule"""
 od = odict()
 od['name'] = Unicode(min_occurs=0, max_occurs=1, nillable=True)
 od['start'] = Unicode(min_occurs=0, max_occurs=1, nillable=True)
 od['end'] = Unicode(min_occurs=0, max_occurs=1, nillable=True)
-Schedule = ComplexModelBase.produce(STRUCTURE_NAMESPACE, 'Schedule', od)
+Schedule = ComplexModelBase.produce(config.Config.STRUCTURE_NAMESPACE, 'Schedule', od)
 
 """clase flight"""
 od = odict()
@@ -117,21 +117,21 @@ od['schedule'] = Schedule.customize(min_occurs=0, max_occurs=1, nillable=True)
 od['range'] = Unicode(min_occurs=0, max_occurs=1, nillable=True)
 od['info'] = Unicode(min_occurs=0, max_occurs=1, nillable=True)
 
-Flight = ComplexModelBase.produce(STRUCTURE_NAMESPACE, 'Flight', od)
+Flight = ComplexModelBase.produce(config.Config.STRUCTURE_NAMESPACE, 'Flight', od)
 
 """clase getFlights"""
 od = odict()
 od['auth'] = Auth.customize(min_occurs=1, max_occurs=1, nillable=False)
 od['flight'] = Flight.customize(min_occurs=1, max_occurs=1, nillable=False)
 
-GetFlights = ComplexModelBase.produce(GLOBAL_NAMESPACE, 'GetFlights', od)
+GetFlights = ComplexModelBase.produce(config.Config.GLOBAL_NAMESPACE, 'GetFlights', od)
 
 """clase GetFlightsResponse"""
 od = odict()
 od['error'] = Unicode.customize(min_occurs=1, nillable=False)
 od['flights'] = Flight.customize(min_occurs=0, max_occurs='unbounded', nillable=True)
 
-GetFlightsResponse = ComplexModelBase.produce(GLOBAL_NAMESPACE, 'GetFlightsResponse', od)
+GetFlightsResponse = ComplexModelBase.produce(config.Config.GLOBAL_NAMESPACE, 'GetFlightsResponse', od)
 
 
 class AttributeT:
