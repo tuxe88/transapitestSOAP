@@ -17,6 +17,7 @@ _mailinglist
 docs/_build/
 error
 error.log
+nohup.out
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
